@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Álvaro · Session 2 · Present Perfect System</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Patrick+Hand&display=swap');
+:root{
+  --navy:#17324D;--navy2:#0d2f52;--blue:#2E8FB8;--sky:#EAF6FD;--mint:#EAF7F2;
+  --yellow:#FFD75E;--yellow2:#FFF4C7;--cream:#FFFDF8;--white:#fff;--pink:#FFF1F4;
+  --text:#17324D;--muted:#667D90;--line:#D7E3EB;--green:#2F8B69;--red:#C4535D;
+  --purple:#8E73C9;--shadow:0 12px 28px rgba(23,50,77,.10)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#F4F1EA;color:var(--text);font-family:'Nunito',Arial,sans-serif}button{font:inherit}a{color:inherit;text-decoration:none}
+.topbar{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,var(--navy2),#1B5D8C);color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.topbar .inner{max-width:1180px;margin:auto;padding:11px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-weight:900}.brand small{display:block;font-size:11px;color:#D6E8F4;margin-top:2px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}.navlinks a{font-size:12px;font-weight:900;padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.10)}
+.progress-shell{position:sticky;top:62px;z-index:45;height:7px;background:#DCE6EC}.progress{height:100%;width:0;background:linear-gradient(90deg,#42A89D,var(--yellow));transition:.18s}
+.hero{background:linear-gradient(135deg,var(--cream) 67%,var(--sky) 67%);padding:58px 20px 48px;border-bottom:1px solid var(--line)}.wrap{max-width:1120px;margin:auto}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:28px;align-items:center}.eyebrow{font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+.hero h1{font-size:64px;line-height:.93;letter-spacing:-2px;margin:10px 0 14px}.hero h1 em{font-family:'Patrick Hand';font-style:normal;font-weight:400;background:linear-gradient(transparent 72%,var(--yellow) 72%)}
+.hero p{font-size:18px;font-weight:700;color:#35536B;max-width:720px}.chips,.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}.chip,.pill{border:1px solid var(--line);background:#fff;padding:8px 11px;border-radius:999px;font-weight:800;font-size:12px}
+.note{background:var(--yellow);padding:26px;border-radius:22px;font-family:'Patrick Hand';font-size:30px;line-height:1.05;text-align:center;transform:rotate(1deg);box-shadow:var(--shadow)}
+section{padding:44px 20px}.white{background:#fff}.sky{background:#F3FAFD}.mint{background:#F3FBF7}.section-title{font-size:34px;margin:0;font-weight:900;letter-spacing:-1px}.underline{width:84px;height:6px;background:var(--yellow);border-radius:99px;margin:8px 0 18px}
+.lead{font-size:16px;color:var(--muted);font-weight:700;max-width:920px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:0 6px 15px rgba(23,50,77,.05)}.card h3{margin:0 0 8px;font-size:17px}.card p{margin:0;font-size:13px;line-height:1.55}.card.skyc{background:var(--sky)}.card.mintc{background:var(--mint)}.card.yellowc{background:var(--yellow2)}.card.pinkc{background:var(--pink)}
+.metric strong{font-size:30px;display:block}.metric{font-size:12px;font-weight:800}.bookref{margin-top:14px;border:2px dashed #B9DAE9;background:#fff;border-radius:14px;padding:12px 14px;display:flex;gap:10px;align-items:center;font-weight:800;font-size:13px}.badge{background:var(--purple);color:#fff;border-radius:8px;padding:5px 8px;font-size:10px;font-weight:900}
+.rule{padding:16px;border-radius:15px;background:white;border:1px solid var(--line);margin:10px 0}.rule b{color:var(--blue)}.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:20px}.time{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}.time strong{display:block;font-size:21px}.time span{font-size:11px;color:var(--muted);font-weight:900}
+.compare{width:100%;border-collapse:collapse;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 5px 14px rgba(23,50,77,.05)}.compare th,.compare td{border:1px solid var(--line);padding:12px 13px;text-align:left;font-size:13px;vertical-align:top}.compare th{background:var(--sky);font-size:12px}.compare td:first-child{font-weight:900}
+.example{background:#fff;border-left:5px solid var(--yellow);padding:10px 12px;border-radius:9px;margin:8px 0;font-size:14px;font-weight:800}.vocab{display:flex;flex-wrap:wrap;gap:8px}.vocab span{background:#fff;border:1px solid var(--line);padding:8px 11px;border-radius:12px;font-size:12px;font-weight:800}
+.assess-grid{display:grid;grid-template-columns:220px 1fr;gap:20px;margin-top:20px}.side{position:sticky;top:92px;height:max-content;background:#F4F8FA;padding:8px;border-radius:16px;border:1px solid var(--line)}.side button{width:100%;border:0;background:transparent;color:var(--navy);text-align:left;border-radius:10px;padding:11px;font-weight:900;cursor:pointer}.side button small{display:block;color:var(--muted);font-weight:700;margin-top:3px}.side button.active{background:var(--navy);color:#fff}.side button.active small{color:#D9E9F3}
+.panel{display:none}.panel.active{display:block}.qcard{background:#fff;border:1px solid var(--line);border-radius:17px;padding:17px;margin:0 0 12px;box-shadow:0 5px 14px rgba(23,50,77,.05)}.qnum{font-size:11px;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:.08em}.qtext{font-size:15px;font-weight:900;margin:6px 0 11px}.options{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.option{border:2px solid #D9E4EA;background:#fff;color:var(--navy);padding:10px;border-radius:11px;text-align:left;cursor:pointer;font-weight:800}.option:hover:not(:disabled){border-color:var(--blue);background:#F6FBFE}.option.correct{border-color:var(--green);background:#EAF7F1;color:#1D6A50}.option.wrong{border-color:var(--red);background:#FFF0F1;color:#963844}.option:disabled{cursor:default}.feedback{display:none;margin-top:9px;border-radius:10px;padding:9px 11px;font-size:12px;font-weight:800}.feedback.show{display:block}.feedback.good{background:#EAF7F1;color:#1D6A50}.feedback.bad{background:#FFF0F1;color:#963844}
+.scorebox{display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--navy);color:#fff;border-radius:16px;padding:14px 16px;margin-bottom:14px}.scorebox strong{font-size:26px}.mini-progress{flex:1;min-width:160px;height:9px;background:rgba(255,255,255,.18);border-radius:999px;overflow:hidden}.mini-fill{height:100%;width:0;background:var(--yellow);transition:.2s}
+.timer{display:flex;align-items:center;gap:10px;background:var(--yellow2);border:1px solid #ECD373;padding:12px 14px;border-radius:14px;margin-bottom:14px}.timer strong{font-size:25px}.btn{border:0;border-radius:999px;padding:10px 15px;font-weight:900;cursor:pointer}.btn.primary{background:var(--navy);color:#fff}.btn.secondary{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.errorlog{width:100%;border-collapse:collapse;margin-top:12px}.errorlog th,.errorlog td{border:1px solid var(--line);padding:10px;font-size:12px}.errorlog th{background:var(--sky)}.errorlog td[contenteditable="true"]{background:#fff;min-width:140px}
+.callout{border-radius:18px;padding:18px;background:var(--navy);color:#fff}.callout h3{margin-top:0}.callout .hand{font-family:'Patrick Hand';font-size:27px;color:var(--yellow)}.footer{background:var(--navy);color:#fff;padding:32px 20px;text-align:center}.footer strong{font-family:'Patrick Hand';font-size:31px}
+.match-choice{width:100%;border:2px solid #D9E4EA;background:#fff;color:var(--navy);padding:11px;border-radius:12px;text-align:left;cursor:pointer;font-weight:800;margin-bottom:8px}.match-choice.selected{border-color:var(--purple);background:#F4F0FB}.match-choice.done{border-color:var(--green);background:#EAF7F1;color:#1D6A50;cursor:default}.match-choice.bad{border-color:var(--red);background:#FFF0F1;color:#963844}
+.memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.memory-card{min-height:92px;border:0;border-radius:14px;background:linear-gradient(135deg,var(--navy),#245F8C);color:#fff;cursor:pointer;padding:10px;display:grid;place-items:center;text-align:center;font-weight:900;box-shadow:0 6px 14px rgba(23,50,77,.12);position:relative}.memory-card .mem-num{position:absolute;top:7px;left:8px;width:24px;height:24px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;font-size:11px}.memory-card .mem-face{opacity:0;transform:scale(.94);transition:.15s}.memory-card.flipped,.memory-card.matched{background:#fff;color:var(--navy);border:2px solid #B9DCEA}.memory-card.flipped .mem-face,.memory-card.matched .mem-face{opacity:1;transform:none}.memory-card.matched{background:#EAF7F1;border-color:var(--green);cursor:default}
+@media(max-width:900px){.hero-grid,.assess-grid{grid-template-columns:1fr}.side{position:static;display:grid;grid-template-columns:repeat(2,1fr)}.grid4,.grid3,.timeline{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:50px}.navlinks{display:none}}
+@media(max-width:700px){.memory-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.grid4,.grid3,.grid2,.timeline,.options,.side{grid-template-columns:1fr}.hero h1{font-size:43px}.hero{padding-top:38px}.note{font-size:25px}.memory-grid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<nav class="topbar"><div class="inner"><div class="brand">English with Mr. Rengifo<small>Álvaro · Exam Preparation · Session 2</small></div><div class="navlinks"><a href="#overview">Overview</a><a href="#grammar">Grammar</a><a href="#practice">Practice</a><a href="#timed">Timed Block</a><a href="#gamezone">Game Zone</a><a href="#homework">Homework</a></div></div></nav>
+<div class="progress-shell"><div class="progress" id="scrollProgress"></div></div>
+
+<header class="hero"><div class="wrap hero-grid">
+<div><div class="eyebrow">Session 2 · Present Perfect System · American English</div><h1>Past experience.<br><em>Present connection.</em></h1>
+<p>Build a clear system for Present Perfect Simple and Continuous, time expressions, and the contrast with Simple Past — then apply it in cumulative exam-style practice.</p>
+<div class="chips"><span class="chip">Present Perfect Simple</span><span class="chip">Present Perfect Continuous</span><span class="chip">just / already / yet</span><span class="chip">for / since</span><span class="chip">vs Simple Past</span></div></div>
+<div class="note">Connect the past<br>to the present.<br><b>Choose by meaning.</b></div>
+</div></header>
+
+<section id="overview"><div class="wrap">
+<h2 class="section-title">What we are doing today</h2><div class="underline"></div>
+<p class="lead">Session 2 builds directly on Session 1. Álvaro will move from finished past events to actions and experiences that connect past and present, with special attention to the distractors commonly used in objective questions.</p>
+<div class="grid4">
+<div class="card skyc metric"><strong>2</strong>Present Perfect forms</div><div class="card mintc metric"><strong>5</strong>core contrasts</div><div class="card yellowc metric"><strong>10</strong>timed questions</div><div class="card pinkc metric"><strong>1</strong>cumulative review</div>
+</div>
+<div class="timeline"><div class="time"><strong>10'</strong><span>SESSION 1 RETRIEVAL</span></div><div class="time"><strong>25'</strong><span>PERFECT SIMPLE</span></div><div class="time"><strong>20'</strong><span>PERFECT CONTINUOUS</span></div><div class="time"><strong>25'</strong><span>EXAM PRACTICE</span></div><div class="time"><strong>10'</strong><span>ERROR LOG</span></div></div>
+<div class="bookref"><span class="badge">REFERENCE</span><span>Grammar in Use Intermediate · 4th Edition · selected Present Perfect units. The book supports the session; the exam syllabus drives the selection.</span></div>
+</div></section>
+
+<section class="white" id="grammar"><div class="wrap">
+<h2 class="section-title">Present Perfect Simple</h2><div class="underline"></div>
+<div class="grid2">
+<div class="card skyc"><h3>Experience / result</h3><p>Use it when the exact finished time is not important, or when a past action has a present result.</p><div class="example">I have taken several practice tests.</div><div class="example">She has finished the report.</div></div>
+<div class="card mintc"><h3>Unfinished time</h3><p>Use it when the time period is still connected to now.</p><div class="example">I have studied a lot this week.</div><div class="example">We have had three classes this month.</div></div>
+</div>
+<div class="rule"><b>Exam clue:</b> If the sentence gives a finished past time such as <i>yesterday, last year, in 2024, two days ago</i>, use Simple Past — not Present Perfect.</div>
+
+<h2 class="section-title" style="margin-top:34px">just · already · yet</h2><div class="underline"></div>
+<div class="grid3">
+<div class="card"><h3>just</h3><p>A very recent completed action.</p><div class="example">I have just finished.</div></div>
+<div class="card yellowc"><h3>already</h3><p>Something happened sooner than expected.</p><div class="example">She has already submitted it.</div></div>
+<div class="card pinkc"><h3>yet</h3><p>Common in questions and negatives, usually at the end.</p><div class="example">Have you finished yet?</div><div class="example">I haven't finished yet.</div></div>
+</div>
+
+<h2 class="section-title" style="margin-top:34px">for · since</h2><div class="underline"></div>
+<table class="compare"><tr><th>Expression</th><th>Use</th><th>Example</th></tr>
+<tr><td>for</td><td>Duration</td><td>I have studied English for three years.</td></tr>
+<tr><td>since</td><td>Starting point</td><td>I have studied English since 2023.</td></tr></table>
+<div class="rule"><b>Fast check:</b> “How long?” → duration = <b>for</b>; starting point = <b>since</b>.</div>
+
+<h2 class="section-title" style="margin-top:34px">Present Perfect Continuous</h2><div class="underline"></div>
+<div class="grid2">
+<div class="card mintc"><h3>Activity continuing until now</h3><div class="example">I have been studying for two hours.</div><p>The focus is on the activity and its duration.</p></div>
+<div class="card skyc"><h3>Recent activity with a present effect</h3><div class="example">He is tired because he has been working all morning.</div><p>The activity may have just stopped or may still be continuing.</p></div>
+</div>
+<div class="rule"><b>Simple vs Continuous:</b> Simple often emphasizes a result or completed amount; Continuous often emphasizes duration or repeated activity.</div>
+
+<h2 class="section-title" style="margin-top:34px">Present Perfect vs Simple Past</h2><div class="underline"></div>
+<table class="compare"><tr><th>Meaning</th><th>Present Perfect</th><th>Simple Past</th></tr>
+<tr><td>Life experience, no finished time</td><td>I have visited Cusco twice.</td><td>—</td></tr>
+<tr><td>Finished past time</td><td>—</td><td>I visited Cusco in 2024.</td></tr>
+<tr><td>Unfinished time period</td><td>I have studied a lot this week.</td><td>—</td></tr>
+<tr><td>Finished time period</td><td>—</td><td>I studied a lot last week.</td></tr></table>
+</div></section>
+
+<section class="sky"><div class="wrap">
+<h2 class="section-title">Experience & time vocabulary</h2><div class="underline"></div>
+<p class="lead">The Student Hub also identifies experience, time expressions and common collocations as part of Session 2.</p>
+<div class="vocab"><span>experience</span><span>achievement</span><span>recently</span><span>so far</span><span>ever</span><span>never</span><span>just</span><span>already</span><span>yet</span><span>for</span><span>since</span><span>this week</span><span>last week</span><span>take an exam</span><span>make progress</span><span>complete a task</span></div>
+<div class="grid3" style="margin-top:16px">
+<div class="card"><h3>Experience</h3><p>I have <b>taken</b> several English courses.</p></div>
+<div class="card"><h3>Progress</h3><p>I have <b>made progress</b> this month.</p></div>
+<div class="card"><h3>Finished time</h3><p>I <b>completed</b> the assignment last night.</p></div>
+</div></div></section>
+
+<section class="white" id="practice"><div class="wrap">
+<h2 class="section-title">Practice Lab</h2><div class="underline"></div>
+<p class="lead">Three focused blocks: form and meaning, time expressions, and the contrast with Simple Past. Each answer locks after selection and gives immediate feedback.</p>
+<div class="assess-grid"><aside class="side">
+<button class="active" data-panel="perfect">Perfect forms<small>5 questions</small></button>
+<button data-panel="markers">Time markers<small>5 questions</small></button>
+<button data-panel="contrast">Perfect vs Past<small>5 questions</small></button>
+</aside><main>
+<div class="panel active" id="panel-perfect"><div class="scorebox"><strong><span id="sperfect">0</span>/5</strong><div class="mini-progress"><div class="mini-fill" id="fperfect"></div></div></div><div id="perfectQs"></div></div>
+<div class="panel" id="panel-markers"><div class="scorebox"><strong><span id="smarkers">0</span>/5</strong><div class="mini-progress"><div class="mini-fill" id="fmarkers"></div></div></div><div id="markerQs"></div></div>
+<div class="panel" id="panel-contrast"><div class="scorebox"><strong><span id="scontrast">0</span>/5</strong><div class="mini-progress"><div class="mini-fill" id="fcontrast"></div></div></div><div id="contrastQs"></div></div>
+</main></div></div></section>
+
+<section class="mint" id="timed"><div class="wrap">
+<h2 class="section-title">Timed Cumulative Block</h2><div class="underline"></div>
+<p class="lead">Ten mixed questions combining Session 1 tenses with Session 2 Present Perfect. Suggested target: 8 minutes.</p>
+<div class="timer"><strong id="clock">08:00</strong><button class="btn primary" id="startTimer">Start timer</button><button class="btn secondary" id="resetTimer">Reset</button><span id="timerMsg"></span></div>
+<div class="scorebox"><strong><span id="stimed">0</span>/10</strong><div class="mini-progress"><div class="mini-fill" id="ftimed"></div></div><span id="timedDone">0 answered</span></div>
+<div id="timedQs"></div>
+<div id="timedResult" class="card yellowc" style="display:none;margin-top:14px"></div>
+</div></section>
+
+<section class="white"><div class="wrap">
+<h2 class="section-title">Error Log</h2><div class="underline"></div>
+<p class="lead">Record the pattern behind the error — especially whether the problem was the tense, the time expression, or the meaning of the sentence.</p>
+<table class="errorlog"><tr><th>Item / sentence</th><th>My answer</th><th>Correct idea</th><th>Why I missed it</th></tr>
+<tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+<tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+<tr><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr></table>
+</div></section>
+
+<section class="mint" id="gamezone"><div class="wrap">
+<h2 class="section-title">Game Zone</h2><div class="underline"></div>
+<p class="lead">Two Wordwall-style activities to consolidate meaning and time markers without turning the section into another test.</p>
+<div style="display:grid;grid-template-columns:1fr;gap:16px">
+<div class="card"><h3>Game 1 · Time Marker Match</h3><p>Match each expression with its correct use.</p><div class="grid2" id="matchGrid" style="margin-top:14px"></div>
+<div class="scorebox" style="margin-top:14px"><strong><span id="matchScore">0</span>/10</strong><div class="mini-progress"><div class="mini-fill" id="matchFill"></div></div></div>
+<button class="btn secondary" id="resetMatch">Restart Game 1</button></div>
+
+<div class="card"><h3>Game 2 · Perfect Memory</h3><p>Find the six matching pairs. Each pair connects a situation with a natural Present Perfect example.</p>
+<div id="memoryGrid" class="memory-grid" style="margin-top:14px"></div>
+<div class="scorebox" style="margin-top:14px"><strong><span id="memoryScore">0</span>/10</strong><div class="mini-progress"><div class="mini-fill" id="memoryFill"></div></div></div>
+<button class="btn secondary" id="resetMemory">Restart Game 2</button></div>
+</div></div></section>
+
+<section class="sky" id="homework"><div class="wrap">
+<h2 class="section-title">Homework</h2><div class="underline"></div>
+<div class="grid2">
+<div class="card mintc"><h3>Grammar in Use Intermediate</h3><p>Complete the selected Present Perfect exercises assigned after class, based on today’s error pattern.</p><div class="bookref"><span class="badge">BOOK</span><span>Selected Present Perfect units · 4th Edition · American English</span></div></div>
+<div class="card yellowc"><h3>Cumulative Teacher Quiz</h3><p>Complete a mixed quiz combining Session 1 tenses with Present Perfect Simple/Continuous, time expressions and Present Perfect vs Simple Past.</p><div class="example">Target: Explain the time logic before choosing the tense.</div></div>
+</div>
+<div class="callout" style="margin-top:16px"><h3>Session 2 outcome</h3><p class="hand">Choose Present Perfect vs past forms accurately.</p><p>Next session: Pronouns, nouns and articles.</p></div>
+</div></section>
+
+<footer class="footer"><strong>English with Mr. Rengifo</strong><div>Álvaro · Exam Preparation · Session 2 · American English</div></footer>
+
+<script>
+const sets={
+perfect:[
+{q:"I ___ three practice tests so far.",o:["took","have taken","have been taking","was taking"],a:1,e:"So far connects past and present and focuses on a completed number: Present Perfect Simple."},
+{q:"She ___ for the exam for two hours.",o:["studied","has studied","has been studying","was studying"],a:2,e:"The focus is on the duration of an activity continuing until now: Present Perfect Continuous."},
+{q:"We ___ the assignment already.",o:["finished","have finished","have been finishing","finish"],a:1,e:"Already commonly goes with Present Perfect for a completed result connected to now."},
+{q:"He is tired because he ___ all morning.",o:["worked","has worked","has been working","was working"],a:2,e:"The present result comes from a recent ongoing activity: Present Perfect Continuous."},
+{q:"I ___ that movie before.",o:["saw","have seen","have been seeing","was seeing"],a:1,e:"Life experience without a finished past time uses Present Perfect Simple."}
+],
+markers:[
+{q:"I have lived here ___ 2022.",o:["for","since","yet","already"],a:1,e:"Since introduces a starting point."},
+{q:"I have lived here ___ four years.",o:["since","for","yet","just"],a:1,e:"For introduces a duration."},
+{q:"Have you finished the report ___?",o:["already","since","yet","for"],a:2,e:"Yet is common at the end of Present Perfect questions."},
+{q:"She has ___ submitted the form.",o:["yet","since","already","for"],a:2,e:"Already indicates that something happened sooner than expected."},
+{q:"I have ___ arrived.",o:["just","for","since","yet"],a:0,e:"Just expresses a very recent completed action."}
+],
+contrast:[
+{q:"I ___ Cusco in 2024.",o:["have visited","visited","have been visiting","visit"],a:1,e:"2024 is a finished past time, so Simple Past is required."},
+{q:"I ___ Cusco twice.",o:["visited","have visited","was visiting","visit"],a:1,e:"No finished time is given; this is life experience."},
+{q:"She ___ a lot this week.",o:["studied","has studied","was studying","studies"],a:1,e:"This week is still connected to now, so Present Perfect is natural."},
+{q:"She ___ a lot last week.",o:["has studied","studied","has been studying","studies"],a:1,e:"Last week is a finished time period, so Simple Past is required."},
+{q:"___ you ever ___ an international exam?",o:["Did / take","Have / taken","Were / taking","Do / take"],a:1,e:"Ever asks about life experience, so Present Perfect is the best choice."}
+],
+timed:[
+{q:"I ___ this company for three years.",o:["worked","have worked","am working","was working"],a:1,e:"For three years links past and present."},
+{q:"She ___ the report yesterday.",o:["has finished","finished","has been finishing","finishes"],a:1,e:"Yesterday is a finished past time."},
+{q:"They ___ for the exam all morning.",o:["studied","have been studying","were studying","study"],a:1,e:"The activity started earlier and continues/recently continued until now."},
+{q:"Have you completed the quiz ___?",o:["already","yet","since","for"],a:1,e:"Yet is common in questions and negatives."},
+{q:"I ___ him last Saturday.",o:["have seen","saw","have been seeing","see"],a:1,e:"Last Saturday requires Simple Past."},
+{q:"We ___ two units so far.",o:["completed","have completed","were completing","complete"],a:1,e:"So far + completed amount → Present Perfect Simple."},
+{q:"At 8:00 last night, I ___ grammar.",o:["reviewed","was reviewing","have reviewed","have been reviewing"],a:1,e:"Action in progress at a specific past time → Past Continuous."},
+{q:"He has lived here ___ 2021.",o:["for","since","yet","already"],a:1,e:"2021 is the starting point."},
+{q:"She has ___ finished the exercise.",o:["yet","just","since","for"],a:1,e:"Just = very recent completion."},
+{q:"While I ___ home, my teacher called.",o:["walked","was walking","have walked","have been walking"],a:1,e:"Background past action → Past Continuous."}
+]};
+const state={perfect:[],markers:[],contrast:[],timed:[]},scores={perfect:0,markers:0,contrast:0,timed:0};
+function renderSet(name,container){const root=document.getElementById(container);root.innerHTML="";state[name]=sets[name].map(()=>false);scores[name]=0;updateScore(name);sets[name].forEach((x,i)=>{const el=document.createElement("div");el.className="qcard";el.innerHTML=`<div class="qnum">${name==="timed"?"Timed item":"Question"} ${i+1}</div><div class="qtext">${x.q}</div><div class="options">${x.o.map((v,j)=>`<button class="option" data-set="${name}" data-i="${i}" data-o="${j}">${v}</button>`).join("")}</div><div class="feedback" id="fb-${name}-${i}"></div>`;root.appendChild(el)});root.querySelectorAll(".option").forEach(b=>b.addEventListener("click",()=>answer(b.dataset.set,+b.dataset.i,+b.dataset.o)))}
+let timedFinished=false;
+function answer(name,i,j){if(state[name][i])return;state[name][i]=true;const x=sets[name][i];const btns=[...document.querySelectorAll(`[data-set="${name}"][data-i="${i}"]`)];btns.forEach(b=>b.disabled=true);const fb=document.getElementById(`fb-${name}-${i}`);if(j===x.a){scores[name]++;btns[j].classList.add("correct");fb.className="feedback show good";fb.textContent="Correct. "+x.e}else{btns[j].classList.add("wrong");btns[x.a].classList.add("correct");fb.className="feedback show bad";fb.textContent="Review. "+x.e}updateScore(name);if(name==="timed"&&state.timed.filter(Boolean).length===sets.timed.length&&!timedFinished)finishTimedBlock()}
+function updateScore(name){const total=sets[name].length,done=state[name]?.filter(Boolean).length||0;const s=document.getElementById("s"+name),f=document.getElementById("f"+name);if(s)s.textContent=scores[name];if(f)f.style.width=(done/total*100)+"%";if(name==="timed")document.getElementById("timedDone").textContent=`${done} answered`}
+document.querySelectorAll(".side button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".side button").forEach(x=>x.classList.remove("active"));document.querySelectorAll(".panel").forEach(x=>x.classList.remove("active"));btn.classList.add("active");document.getElementById("panel-"+btn.dataset.panel).classList.add("active")}));
+renderSet("perfect","perfectQs");renderSet("markers","markerQs");renderSet("contrast","contrastQs");renderSet("timed","timedQs");
+
+let remaining=480,timer=null,elapsedSeconds=0;
+function drawClock(){const m=String(Math.floor(Math.max(remaining,0)/60)).padStart(2,"0"),s=String(Math.max(remaining,0)%60).padStart(2,"0");document.getElementById("clock").textContent=`${m}:${s}`}
+function formatElapsed(sec){return `${Math.floor(sec/60)} min ${String(sec%60).padStart(2,"0")} sec`}
+function finishTimedBlock(){timedFinished=true;if(timer){clearInterval(timer);timer=null}const correct=scores.timed,incorrect=10-correct,pct=correct*10;const result=document.getElementById("timedResult");let pace=elapsedSeconds<=360?"Fast pace":elapsedSeconds<=480?"Good exam pace":"Needs faster pacing";let accuracy=pct>=90?"Excellent accuracy":pct>=80?"Strong accuracy":pct>=70?"Functional accuracy":"Accuracy needs reinforcement";let improve=[];if(incorrect===0)improve.push("Maintain this accuracy while keeping the same pace.");else{improve.push("Review whether each error came from the time expression or the tense meaning.");if(incorrect>=3)improve.push("Prioritize accuracy before increasing speed.");else improve.push("Keep the pace, but pause when Present Perfect and Simple Past both look possible.");}if(elapsedSeconds>480)improve.push("Practice identifying finished-time expressions more quickly.");if(elapsedSeconds<300&&incorrect>=2)improve.push("You may be answering too quickly; check whether the time period is finished or connected to now.");result.innerHTML=`<h3>Timed Block Feedback</h3><p><b>Time:</b> ${formatElapsed(elapsedSeconds)} · <b>Correct:</b> ${correct}/10 · <b>Incorrect:</b> ${incorrect}/10</p><div class="grid2"><div class="card mintc"><h3>${accuracy}</h3><p>${pct}% correct.</p></div><div class="card skyc"><h3>${pace}</h3><p>${elapsedSeconds<=480?"You completed the block within the suggested 8-minute target.":"You went beyond the suggested 8-minute target."}</p></div></div><div class="rule"><b>Points to improve:</b><ul>${improve.map(x=>`<li>${x}</li>`).join("")}</ul></div>`;result.style.display="block";document.getElementById("timerMsg").textContent="Completed — timer stopped automatically."}
+document.getElementById("startTimer").addEventListener("click",()=>{if(timer||timedFinished)return;document.getElementById("timerMsg").textContent="";timer=setInterval(()=>{remaining--;elapsedSeconds++;drawClock();if(remaining<=0){clearInterval(timer);timer=null;document.getElementById("timerMsg").textContent="8-minute target reached — continue if needed. The timer will stop when all 10 questions are answered."}},1000)});
+document.getElementById("resetTimer").addEventListener("click",()=>{clearInterval(timer);timer=null;remaining=480;elapsedSeconds=0;timedFinished=false;drawClock();document.getElementById("timerMsg").textContent="";document.getElementById("timedResult").style.display="none";renderSet("timed","timedQs")});
+
+/* Game 1 */
+const matchPairs=[
+["just","very recent completed action"],
+["already","sooner than expected"],
+["yet","questions / negatives, usually at the end"],
+["for","duration"],
+["since","starting point"]
+];
+let matchLeft=null,matchRight=null,matchDone=0;
+function shuffle(a){return [...a].sort(()=>Math.random()-.5)}
+function renderMatch(){matchLeft=matchRight=null;matchDone=0;document.getElementById("matchScore").textContent="0";document.getElementById("matchFill").style.width="0%";const grid=document.getElementById("matchGrid");grid.innerHTML="";const left=document.createElement("div"),right=document.createElement("div");shuffle(matchPairs.map((p,i)=>({i,t:p[0]}))).forEach(x=>{const b=document.createElement("button");b.className="match-choice";b.textContent=x.t;b.dataset.i=x.i;b.dataset.side="l";b.onclick=()=>selectMatch(b);left.appendChild(b)});shuffle(matchPairs.map((p,i)=>({i,t:p[1]}))).forEach(x=>{const b=document.createElement("button");b.className="match-choice";b.textContent=x.t;b.dataset.i=x.i;b.dataset.side="r";b.onclick=()=>selectMatch(b);right.appendChild(b)});grid.append(left,right)}
+function selectMatch(btn){if(btn.classList.contains("done"))return;const side=btn.dataset.side;document.querySelectorAll(`.match-choice[data-side="${side}"]`).forEach(x=>x.classList.remove("selected"));btn.classList.add("selected");if(side==="l")matchLeft=btn;else matchRight=btn;if(matchLeft&&matchRight){if(matchLeft.dataset.i===matchRight.dataset.i){matchLeft.classList.remove("selected");matchRight.classList.remove("selected");matchLeft.classList.add("done");matchRight.classList.add("done");matchDone++;document.getElementById("matchScore").textContent=String(matchDone*2);document.getElementById("matchFill").style.width=(matchDone/5*100)+"%";matchLeft=matchRight=null}else{const a=matchLeft,b=matchRight;a.classList.add("bad");b.classList.add("bad");setTimeout(()=>{a.classList.remove("bad","selected");b.classList.remove("bad","selected")},300);matchLeft=matchRight=null}}}
+document.getElementById("resetMatch").addEventListener("click",renderMatch);
+
+/* Game 2 */
+const memoryPairs=[
+["Life experience","I have taken several English courses."],
+["Recent completion","I have just finished the exercise."],
+["Unfinished time","I have studied a lot this week."],
+["Duration","I have lived here for three years."],
+["Starting point","I have lived here since 2023."],
+["Ongoing activity","I have been studying for two hours."]
+];
+let memoryDeck=[],memoryFirst=null,memoryLock=false,memoryMatches=0;
+function renderMemory(){memoryFirst=null;memoryLock=false;memoryMatches=0;document.getElementById("memoryScore").textContent="0";document.getElementById("memoryFill").style.width="0%";memoryDeck=shuffle(memoryPairs.flatMap((p,i)=>[{pair:i,text:p[0]},{pair:i,text:p[1]}]));const grid=document.getElementById("memoryGrid");grid.innerHTML="";memoryDeck.forEach((c,i)=>{const b=document.createElement("button");b.className="memory-card";b.innerHTML=`<span class="mem-num">${i+1}</span><span class="mem-face">${c.text}</span>`;b.addEventListener("click",()=>flipMemory(i,b));grid.appendChild(b)})}
+function flipMemory(i,b){if(memoryLock||b.classList.contains("matched")||b.classList.contains("flipped"))return;b.classList.add("flipped");if(memoryFirst===null){memoryFirst={i,b};return}memoryLock=true;const first=memoryFirst;if(memoryDeck[first.i].pair===memoryDeck[i].pair){setTimeout(()=>{first.b.classList.remove("flipped");b.classList.remove("flipped");first.b.classList.add("matched");b.classList.add("matched");memoryMatches++;const pts=memoryMatches===6?10:Math.round(memoryMatches/6*10);document.getElementById("memoryScore").textContent=pts;document.getElementById("memoryFill").style.width=(memoryMatches/6*100)+"%";memoryFirst=null;memoryLock=false},300)}else{setTimeout(()=>{first.b.classList.remove("flipped");b.classList.remove("flipped");memoryFirst=null;memoryLock=false},650)}}
+document.getElementById("resetMemory").addEventListener("click",renderMemory);
+renderMatch();renderMemory();
+
+window.addEventListener("scroll",()=>{const h=document.documentElement.scrollHeight-innerHeight;document.getElementById("scrollProgress").style.width=(h?scrollY/h*100:0)+"%"});
+</script>
+</body></html>
